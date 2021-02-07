@@ -1,0 +1,6 @@
+{
+  "hosting": {
+    "site": "reactplayground-mathiaswael",
+    "public": "build"
+  }
+}
