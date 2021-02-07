@@ -21,10 +21,11 @@ function SortingPage (props) {
 
     function resetElements() {
         if(!currentlySorting) {
+            const leftoverSpace = (boxSize.width - (noOfSortingElements * 20)) / 2 + 5;
             const newSortingElements = [];
             for (let index = 0; index < noOfSortingElements; index++) {
                 const randomHeight = Math.floor(Math.random() * (boxSize.height - 60)) + 30;
-                newSortingElements.push({height: randomHeight, identifier: index});
+                newSortingElements.push({height: randomHeight, identifier: index, left: index * 20 + leftoverSpace});
             }
             setSortingElements(newSortingElements);
         }
@@ -61,7 +62,6 @@ function SortingPage (props) {
                 sortingBoxRect={sortingBoxRect}
                 setSortingBoxRect={setSortingBoxRect}
                 sortingElements={sortingElements}
-                leftoverSpace={(boxSize.width - (noOfSortingElements * 20)) / 2 + 5}
             />
             <SliderBox />
             <div className={styles.StartRow}>

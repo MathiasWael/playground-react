@@ -1,6 +1,7 @@
 .SortingElement {
     position: absolute;
     font-size: 12px;
+    background-color: #002d47;
 }
 .SortingElementActive {
     background-color: #c5812c;

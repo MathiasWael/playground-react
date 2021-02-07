@@ -9,7 +9,7 @@ function MapBox(props) {
         elements.push(
             <MapItem 
                 item={props.mapItems[index]} 
-                key={props.mapItems[index].horizontal + ":" + props.mapItems[index].vertical}
+                key={props.mapItems[index].key}
                 setItemStatus={props.setItemStatus}
                 mouseDown={mouseDown}
                 mouseDownHandle={mouseDownHandle}
@@ -34,6 +34,7 @@ function MapBox(props) {
 }
 
 function MapItem(props) {
+    console.log("MAPITEM")
     const color = getItemColor(props.item);
     const style = {
         height: props.itemSize,
@@ -66,7 +67,7 @@ function MapItem(props) {
     }
 
     return (
-        <div style={style} className={styles.MapItem} onMouseDown={mouseDownHandle} onMouseUp={props.mouseLeaveHandle} onMouseEnter={mouseEnterHandle} draggable={false}>
+        <div style={style} className={styles.MapItem} id={props.item.key} onMouseDown={mouseDownHandle} onMouseUp={props.mouseLeaveHandle} onMouseEnter={mouseEnterHandle} draggable={false}>
             <div className={styles.MapItemInner}>
                 {getWeightText()}
             </div>

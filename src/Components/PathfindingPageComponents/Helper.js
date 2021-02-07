@@ -18,7 +18,8 @@ function resetElements(height, width, top, itemSize, setMapItems) {
                 bottomPos: bottomPos + leftoverVertical,
                 leftPos: leftPos + leftoverHorizontal,
                 index: index,
-                weight: getRandomWeight()
+                weight: getRandomWeight(),
+                key: horiIndex + ":" + vertIndex
             });
             index++;
         }

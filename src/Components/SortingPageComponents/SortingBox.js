@@ -19,9 +19,10 @@ function SortingBox (props) {
     for (let index = 0; index < props.sortingElements.length; index++) {
         elements.push(<SortingElement 
             sortingElement={props.sortingElements[index]} 
-            left={index * 20 + props.leftoverSpace} 
+            left={props.sortingElements[index].left} 
             key={props.sortingElements[index].identifier}
             sortingBoxRect={props.sortingBoxRect}
+            identifier={props.sortingElements[index].identifier}
         />);
     }
 
@@ -40,16 +41,16 @@ function SortingElement (props) {
         bottom: props.sortingBoxRect.height - props.sortingBoxRect.y
     };
 
-    let classNames = [styles.SortingElement];
-    if(props.sortingElement.active) {
-        classNames.push(styles.SortingElementActive);
-    }
-    else {
-        classNames.push(styles.SortingElementInactive);
-    }
+    // let classNames = [styles.SortingElement];
+    // if(props.sortingElement.active) {
+    //     classNames.push(styles.SortingElementActive);
+    // }
+    // else {
+    //     classNames.push(styles.SortingElementInactive);
+    // }
 
     return (
-        <div style={style} className={classNames.join(' ')}/>
+        <div style={style} id={props.identifier} className={styles.SortingElement}/>
     );
 }
 

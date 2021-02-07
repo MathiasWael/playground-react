@@ -36,7 +36,7 @@ async function Djikstra(mapItems, setCurrentlyPathfinding, setMapItems, mapBoxRe
 
         currentNode.status = "current";
         map[currentNode.index].status = "current";
-        setMapItems(map);
+        colorElement(map[currentNode.index]);
         await sleep(getDelay());
 
         for (let index = 0; index < currentNode.neighbours.length; index++) {
@@ -52,24 +52,27 @@ async function Djikstra(mapItems, setCurrentlyPathfinding, setMapItems, mapBoxRe
         }
 
         map[currentNode.index].status = "visited";
-        setMapItems(map);
+        colorElement(map[currentNode.index]);
         await sleep(getDelay());
     }
 
+    setMapItems(map);
     setCurrentlyPathfinding(false);
 }
 
-async function paintDjikstraPath(map, target, setMapItems) {
+async function paintDjikstraPath(map, target) {
     if(map[target.index].status === "End" || !target.previous) {
         map[target.index].status = "pathGoal";
     }
     else {
         map[target.index].status = "path";
     }
-    setMapItems(map);
+
+    colorElement(map[target.index]);
+    colorElementText(map[target.index])
     await sleep(getDelay());
     if(target.previous) {
-        paintDjikstraPath(map, target.previous, setMapItems);
+        paintDjikstraPath(map, target.previous);
     }
 }
 
@@ -83,6 +86,36 @@ function djikstraFindNextTarget(unvisitedSet) {
         }
     }
     return currentNodeIndex;
+}
+
+function colorElement(item) {
+    document.getElementById(item.key).style.backgroundColor = getColor(item);
+}
+
+function colorElementText(item) {
+    document.getElementById(item.key).style.color = "whitesmoke";
+}
+
+function getColor(item) {
+    switch (item.status) {
+        case "Start":
+            return "#00e500";
+        case "End":
+            return "#e50000";
+        case "Block":
+            return "#333333";
+        case "visited":
+            return "#A0A093"
+        case "pathGoal":
+            return "#47677A";
+        case "path":
+            return "#194259";
+        case "current":
+            return "#194259";
+        
+        default:
+            return "#e5e5e5";
+    }
 }
 
 function getDelay() {
