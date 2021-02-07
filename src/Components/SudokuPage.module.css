@@ -1,0 +1,48 @@
+.SudokuPage {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: table;
+    background-color: #203647;
+    color: whitesmoke;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.PageRow {
+    display: table-row;
+    height: 15%;
+}
+.RestartCell {
+    display: table-cell;
+    vertical-align: top;
+}
+.Restart {
+    margin: 40px;
+    display: inline-block;
+    cursor: pointer;
+}
+.OptionsCell {
+    display: table-cell;
+    vertical-align: bottom;
+}
+.Options {
+    margin: 40px;
+    margin-left: 120px;
+    margin-right: 120px;
+    display: inline-block;
+    cursor: pointer;
+}
+.NotesActive {
+    color: rgb(79, 206, 79);
+}
+.NotesInactive {
+    color: rgb(204, 72, 72);
+}

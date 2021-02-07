@@ -1,0 +1,56 @@
+.SudokuBox {
+    display: table-row;
+    height: 50%;
+}
+.SudokuElement {
+    position: absolute;
+    font-size: 16px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    color: black;
+    display: table;
+    height: 49px;
+    width: 49px;
+    background-color: whitesmoke;
+    outline: none;
+    font-family: monospace;
+}
+.SudokuElement:hover {
+    background-color: rgb(194, 196, 197);
+}
+.Left {
+    border-left-width: 3px;
+}
+.Right {
+    border-right-width: 3px;
+}
+.Top {
+    border-top-width: 3px;
+}
+.Bottom {
+    border-bottom-width: 3px;
+}
+.DisplayValue {
+    font-size: 35px;
+    vertical-align: middle;
+    padding-top: 3px;
+}
+.DisplayValueDefault {
+    color: #1b7ac2;
+}
+.NotesTable {
+    font-size: 9px;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    height: 49px;
+    width: 47px;
+    color: rgb(70, 70, 70);
+}
+.NotesTableRow {
+    height: 13px;
+}
+.NotesTableCell {
+    width: 13px;
+}

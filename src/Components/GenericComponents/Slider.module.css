@@ -1,0 +1,13 @@
+.SliderBox {
+    display: table-row;
+    height: 20%;
+}
+.SliderBoxInner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.Slider {
+    width: 50%;
+    display: inline-block;
+}

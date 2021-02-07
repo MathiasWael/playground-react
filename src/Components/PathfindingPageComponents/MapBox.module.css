@@ -1,0 +1,19 @@
+.MapBox {
+    display: table-row;
+    background-color: gray;
+    height: 50%;
+}
+.MapItem {
+    position: absolute;
+    font-size: 16px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    color: black;
+    display: table;
+}
+.MapItemInner {
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events: none;
+}

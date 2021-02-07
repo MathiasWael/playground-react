@@ -1,0 +1,15 @@
+.SortingElement {
+    position: absolute;
+    font-size: 12px;
+}
+.SortingElementActive {
+    background-color: #c5812c;
+}
+.SortingElementInactive {
+    background-color: #002d47;
+}
+.SortingBox {
+    display: table-row;
+    background-color: gray;
+    height: 50%;
+}

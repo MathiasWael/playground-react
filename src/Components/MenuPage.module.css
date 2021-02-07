@@ -1,0 +1,53 @@
+.MenuPage {
+    background-color: gray;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: table;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.MenuPageRow {
+    display: table-row;
+}
+.MenuButton {
+    cursor: pointer;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 50%;
+    font-size: 40px;
+    font-family:'Courier New', Courier, monospace;
+}
+.MenuTopLeft {
+    background-color: #203647;
+    color: whitesmoke;
+}
+.MenuTopLeft:hover {
+    background-color: #364a59;
+}
+.MenuTopRight {
+    background-color: #12232E;
+    color: whitesmoke;
+}
+.MenuTopRight:hover {
+    background-color: #293842;
+}
+.MenuBottomLeft {
+    background-color:#003d61;
+    color: whitesmoke;
+}
+.MenuBottomLeft:hover {
+    background-color:#195070;
+}
+.MenuBottomRight {
+    background-color: #002d47;
+    color: whitesmoke;
+}
+.MenuBottomRight:hover {
+    background-color: #194259;
+}
