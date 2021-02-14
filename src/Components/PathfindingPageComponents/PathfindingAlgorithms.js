@@ -69,7 +69,6 @@ async function paintDjikstraPath(map, target) {
     }
 
     colorElement(map[target.index]);
-    colorElementText(map[target.index])
     await sleep(getDelay());
     if(target.previous) {
         paintDjikstraPath(map, target.previous);
@@ -92,10 +91,6 @@ function colorElement(item) {
     document.getElementById(item.key).style.backgroundColor = getColor(item);
 }
 
-function colorElementText(item) {
-    document.getElementById(item.key).style.color = "whitesmoke";
-}
-
 function getColor(item) {
     switch (item.status) {
         case "Start":
@@ -112,7 +107,6 @@ function getColor(item) {
             return "#194259";
         case "current":
             return "#194259";
-        
         default:
             return "#e5e5e5";
     }

@@ -1,6 +1,10 @@
 {
-  "hosting": {
-    "site": "reactplayground-mathiaswael",
-    "public": "build"
-  }
+    "hosting": {
+        "site": "reactplayground-mathiaswael",
+        "public": "build",
+        "rewrites": [ {
+            "source": "**",
+            "destination": "/index.html"
+          }]
+    }
 }
